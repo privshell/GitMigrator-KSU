@@ -1,6 +1,4 @@
-id=gitmigrator
-name=Git Migrator
-version=v1.0.0
-versionCode=1
-author=privshell
-description=AMOLED WebUI to back up GitHub repos, move them (all branches/tags/history) to a new account, upload folders and fix old-username links. Needs Termux (git + python).
+id: gitmigrator
+enable: true
+update_to: https://github.com/privshell/GitMigrator-KSU.git
+source: https://github.com/privshell/GitMigrator-KSU
