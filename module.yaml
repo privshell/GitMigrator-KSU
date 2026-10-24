@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/KernelSU-Modules/tools/main/schemas/module.schema.json
+# KernelSU Modules metadata. Reference: https://developers.kernelsu.org/docs/module-yaml
+# version / versionCode come from module/module.prop inside the release ZIP, not from this file.
+schemaVersion: 1
+id: gitmigrator
+name: Git Migrator
+summary: AMOLED WebUI to back up GitHub repos, move them to a new account, and fix old-username links.
+description: README.md
+license: MIT
+homepage: https://github.com/privshell/gitmigrator
+support: https://github.com/privshell/gitmigrator/issues
+tags: [git, github, webui, backup, migration, termux]
+metamodule: false
+
+authors:
+  - name: privshell
+    url: https://github.com/privshell
+
+compatibility:
+  androidMinApi: 28
+  architectures: [arm64-v8a, armeabi-v7a, x86_64, x86]
+
+release:
+  assetPattern: "gitmigrator-*.zip"
