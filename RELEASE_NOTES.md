@@ -1,19 +1,15 @@
-## AEGIS // FIREWALL v1.0.0
+An AMOLED-black **KernelSU WebUI module** for moving GitHub projects between accounts, straight from your rooted phone.
 
-First public release.
+Back up every repo as a full mirror, push them (all branches, tags and history) to a new account, upload any folder to a repo, and fix old-username links across many projects, all from one screen.
 
-- Blacklist and whitelist modes, each with its own rule set
-- Per-app control for Wi-Fi, mobile data, VPN, LAN and roaming, IPv4 and IPv6
-- Host rules: block or allow a domain, IP or CIDR, optionally per port and protocol, per app or for all apps
-- Temporary access (15 min, 1 h, 8 h) that reverts on its own
-- Screen-off blocking with a configurable delay
-- Rules for every Android user: Dual apps, Second space, work profiles
-- Rules applied at boot, before the device is unlocked, in one atomic iptables-restore per address family
-- Watchdog that restores the OUTPUT hook if the system removes it
-- Live connections per app with one-tap address blocking
-- Per-app blocked counters on any kernel, plus kernel LOG when available
-- Profiles, backup and restore
-- Lockdown kill switch in the WebUI and on the module Action button
-- Diagnostics: kernel capability probe, hook state, daemon log, restore errors
+## Features
 
-Requires a kernel with the iptables owner match (all GKI kernels). The installer checks this and aborts if it is missing.
+| Area | What it does |
+|---|---|
+| **File browser** | Browse internal storage with root access, pick a project folder. |
+| **Folder → repo** | Upload a folder as a new commit on a branch, or push a folder's own `.git` with all branches and tags. Empty repos work. |
+| **Link fixer** | Replaces `github.com/OLD/…`, `raw.githubusercontent.com/OLD/…`, `OLD.github.io`, `git@github.com:OLD/…`, shields.io badges, `ghcr.io` and `uses: OLD/…` with the new account. Shows a preview first; supports renamed repos. |
+| **Backup** | Mirrors every repo of the source account (public and private), plus wikis. Re-running only updates. |
+| **Migrate** | Pushes mirrors to the new account with all branches, tags and history. Creates missing repos and sets the default branch. A delay between repos reduces the chance of being flagged again. |
+| **Tools** | `git fsck` health check, plus a `HISTORY.txt` and a `.bundle` file per project as a history reference. |
+| **Assistant (optional)** | Chat that explains job errors and suggests next steps. It never runs anything itself.
