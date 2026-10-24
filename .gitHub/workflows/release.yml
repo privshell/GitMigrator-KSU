@@ -59,3 +59,4 @@ jobs:
           echo "Published ${ASSET_NAME}"
           echo "sha256 ${SHA256}"
           echo "${RELEASE_URL}"
+          
